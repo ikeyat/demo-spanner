@@ -55,13 +55,13 @@
 
 ## サンプルAPの作成や実行
 ###  Spring Initializrでベース作成
-- Spring Boot 2.5.0は未対応なので、2.4.xの必要
+- Spring Cloud GCPはSpring Boot 2.5.0に未対応なので、Spring Boot 2.4.xにする必要がある。
 - Spring Cloud GCPを選択してZipをDLする。
   - pomのgroupIdは`com.google.cloud`だが、これは正しい（リファレンスだと`org.springframework.cloud`となっているが、リファレンス側の最新化漏れぽい）。
 - Spring Cloud GCP全体のstarterが設定されているので、`spring-cloud-gcp-starter-data-spanner`に修正。
 
 ### Spannerエミュレータ接続設定
-- application.ymlには、エミュレータ準備時に設定した以下の値を入れる。
+- application.propertiesには、エミュレータ準備時に設定した以下の値を入れる。
 
   ```
   spring.cloud.gcp.spanner.instance-id=test-instance
