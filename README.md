@@ -82,6 +82,8 @@
   - Spring Cloud SpannerのログをDEBUGレベルにしているので、邪魔な場合はログレベルを修正すること（application.properties）。
   -  最後にレコードをすべて削除するサンプルAPにしているが、エラーなどで途中でアベンドしDBにデータが残ってしまった場合、次回実行時に想定通り動かない。「TBL準備」のテーブル削除＆作成手順によりレコードをリセットすること。
      - RDB向けの`schema.sql`や`data.sql`相当機能が無いのが辛い。 
+  - 今回試していないが、Spring Data Cloud Spannerは動的クエリの対応はして無さそう。
+     - https://googlecloudplatform.github.io/spring-cloud-gcp/2.0.4/reference/html/index.html#spring-data-cloud-spanner
   
 ## 公式サンプルを試す（TODO）
 - https://github.com/GoogleCloudPlatform/spring-cloud-gcp/tree/main/spring-cloud-gcp-samples/spring-cloud-gcp-data-spanner-sample
